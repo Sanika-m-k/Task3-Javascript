@@ -13,13 +13,13 @@ document.querySelector('.again').addEventListener('click',function() {
     document.querySelector("body").style.backgroundColor = 'white';
     clearInterval(timer);
     document.getElementById('timer').innerHTML = ``;
-
+    document.getElementById('hiddenResult').textContent = "?";
 
 });
 
 document.querySelector('.check').addEventListener('click', () => {
     let guess = document.querySelector('.guess').value;
-    if(time[0]==0 && time[1]==0){
+    if(timer==null){
     timer =  setInterval(() => {
         time[1] ++ ;
         if (time[1] % 60 == 0) {
