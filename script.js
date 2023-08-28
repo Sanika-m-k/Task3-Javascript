@@ -12,6 +12,7 @@ document.querySelector('.again').addEventListener('click',function() {
     document.querySelector('.check').style.backgroundColor = '#f1356d';
     document.querySelector("body").style.backgroundColor = 'white';
     clearInterval(timer);
+    timer=null;
     document.getElementById('timer').innerHTML = ``;
     document.getElementById('hiddenResult').textContent = "?";
 
@@ -62,7 +63,7 @@ document.querySelector('.check').addEventListener('click', () => {
     if (document.querySelector('.score').textContent <= 0) {
         
         clearInterval(timer);
-
+        timer=null;
         document.querySelector(".message").textContent = "You lost the Game";
         document.getElementById('timer').innerHTML = ``;
 
